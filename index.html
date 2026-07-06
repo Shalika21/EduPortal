@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTU Student Academic Management Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>VTU Student Academic Management Portal</h1>
+
+        <!-- ================= FORM ================= -->
+
+        <div class="card">
+
+            <h2>Student Academic Details</h2>
+
+            <div class="form-grid">
+
+                <div>
+                    <label>USN</label>
+                    <input type="text" id="usn" placeholder="Enter USN">
+                </div>
+
+                <div>
+                    <label>Student Name</label>
+                    <input type="text" id="name" placeholder="Enter Student Name">
+                </div>
+
+                <div>
+                    <label>Semester</label>
+                    <select id="semester">
+                        <option value="">Select Semester</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Branch</label>
+                    <select id="branch">
+                        <option value="">Select Branch</option>
+                        <option>Computer Science</option>
+                        <option>Information Science</option>
+                        <option>Electronics & Communication</option>
+                        <option>Electrical Engineering</option>
+                        <option>Mechanical Engineering</option>
+                        <option>Civil Engineering</option>
+                        <option>Artificial Intelligence</option>
+                        <option>IoT & CSBT</option>
+                    </select>
+                </div>
+
+                <div>
+    <label>Department</label>
+
+    <select id="department">
+
+        <option value="">Select Department</option>
+
+        <option>CSE</option>
+        <option>ISE</option>
+        <option>ECE</option>
+        <option>EEE</option>
+        <option>Mechanical</option>
+        <option>Civil</option>
+        <option>AIML</option>
+        <option>IoT & CSBT</option>
+
+    </select>
+</div>
+
+                <label>SGPA</label>
+
+<input
+    type="number"
+    id="sgpa"
+    placeholder="0 - 10"
+    step="0.01"
+    min="0"
+    max="10">
+
+                <div>
+                    <label>Attendance (%)</label>
+                    <input type="number" id="attendance" placeholder="0 - 100">
+                </div>
+
+                <div>
+                    <label>Result Status</label>
+                    <select id="status">
+                        <option value="">Select Status</option>
+                        <option>Pass</option>
+                        <option>Fail</option>
+                        <option>Absent</option>
+                        <option>Withheld</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- ================= BUTTONS ================= -->
+
+            <div class="button-group">
+
+                <button onclick="validateStudent()">
+                    Validate
+                </button>
+
+                <button onclick="addStudent()">
+                    Deploy
+                </button>
+
+                <button onclick="updateStudent()">
+                    Update
+                </button>
+
+                <button onclick="deleteStudent()">
+                    Delete
+                </button>
+
+                <button onclick="clearForm()">
+                    Clear
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ================= SUMMARY ================= -->
+
+        <div class="card">
+
+            <h2>Student Academic Summary</h2>
+
+            <table class="summary-table">
+
+                <tr>
+                    <th>USN</th>
+                    <td id="sUSN">-</td>
+                </tr>
+
+                <tr>
+                    <th>Name</th>
+                    <td id="sName">-</td>
+                </tr>
+
+                <tr>
+                    <th>Semester</th>
+                    <td id="sSemester">-</td>
+                </tr>
+
+                <tr>
+                    <th>Branch</th>
+                    <td id="sBranch">-</td>
+                </tr>
+
+                <tr>
+                    <th>Department</th>
+<td id="sDepartment">-</td>
+                </tr>
+
+                <tr>
+                    <th>SGPA</th>
+<td id="sSGPA">-</td>
+                </tr>
+
+                <tr>
+                    <th>Attendance</th>
+                    <td id="sAttendance">-</td>
+                </tr>
+
+                <tr>
+                    <th>Status</th>
+                    <td id="sStatus">-</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- ================= STATUS ================= -->
+
+        <div class="card">
+
+            <h2>Status</h2>
+
+            <div id="statusBar">
+                Ready...
+            </div>
+
+        </div>
+
+        <!-- ================= DATABASE ================= -->
+
+        <div class="card">
+
+    <h2>Active Database</h2>
+
+    <table id="studentTable">
+
+        <thead>
+
+            <tr>
+                <th>USN</th>
+                <th>Name</th>
+                <th>Semester</th>
+                <th>Branch</th>
+<th>Department</th>
+<th>SGPA</th>
+                <th>Attendance</th>
+                <th>Status</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<!-- ================= SERVER DATABASE ================= -->
+
+<div class="card">
+
+    <h2>Server Database</h2>
+
+    <pre id="jsonDatabase"></pre>
+
+</div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

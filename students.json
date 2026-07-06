@@ -1,0 +1,22 @@
+[
+    {
+        "usn": "1EP23IC055",
+        "name": "Shalika S",
+        "semester": "6",
+        "branch": "IoT & CSBT",
+        "department": "IoT & CSBT",
+        "sgpa": "8.87",
+        "attendance": "98",
+        "status": "Pass"
+    },
+    {
+        "usn": "1EP23IC003",
+        "name": "Aishwarya Shetty M",
+        "semester": "6",
+        "branch": "IoT & CSBT",
+        "department": "IoT & CSBT",
+        "sgpa": "8.81",
+        "attendance": "97",
+        "status": "Pass"
+    }
+]

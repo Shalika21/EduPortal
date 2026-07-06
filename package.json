@@ -1,0 +1,25 @@
+{
+  "name": "vtu-student-academic-management-portal",
+  "version": "1.0.0",
+  "description": "VTU Student Academic Management Portal using HTML, CSS, JavaScript, Node.js, Express and JSON Database",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "VTU",
+    "Student",
+    "CRUD",
+    "Express",
+    "JSON",
+    "Academic",
+    "NodeJS"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
