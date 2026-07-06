@@ -1,0 +1,1 @@
+EduPortal is a full-stack web application designed to simplify the management of student academic records. It provides secure CRUD functionality with real-time validation, academic summaries, server database visualization, and persistent JSON storage using Node.js and Express.js.
